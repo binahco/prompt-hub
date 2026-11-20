@@ -1,0 +1,24 @@
+# Manifest del consumidor. Contrato e inventario a la vez (ARCHITECTURE.md §2.1).
+week: 17
+name: prompt-hub
+core_version: 1.1.1
+
+reused_modules:
+  - llm-client
+  - schema-validate
+  - secure-base
+  - test-kit
+  - web-api-base
+  - cache-ratelimit
+  - parser-io
+
+new_surface:
+  - "catálogo HTTP de los prompts de la flota: inventario, detalle por secciones y render con variables"
+  - "tercer consumidor de parser-io (sem. 17): regla del tercer uso (D12) — el módulo se consolida"
+  - "ficha LLM del prompt (prompt-card-v1) con caché TTL y límite de ritmo alrededor del proveedor"
+  - "render redactado: lo que sale del template pasa por secure-base antes de la respuesta"
+
+estimated_new_surface: 25
+
+# Presupuesto máximo de evals en USD por semana (ARCHITECTURE.md §8.1).
+eval_budget_usd: 2.0
